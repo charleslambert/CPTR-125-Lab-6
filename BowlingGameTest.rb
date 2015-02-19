@@ -8,9 +8,7 @@ class BowlingGameTest < Test::Unit::TestCase
 	end
 	
 	def testGutterGame()
-		n = 20
-		pins = 0
-		rollMany(n,pins)
+		rollMany(20,0)
 		assert_equal(0, @g.score())
 	end
 	
