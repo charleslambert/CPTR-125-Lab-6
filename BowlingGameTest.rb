@@ -8,7 +8,7 @@ class BowlingGameTest < Test::Unit::TestCase
 	end
 	
 	def rollMany(n,pins)
-		for i in 1..n
+		for i in (0...n)
 			@g.roll(pins)
 		end
 	end

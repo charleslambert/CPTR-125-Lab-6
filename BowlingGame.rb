@@ -1,7 +1,7 @@
 class Game
 	def initialize 
 		@score = 0
-		@rolls = []
+		@rolls = [0]*21
 		@currentRoll = 0
 	end
 	
@@ -11,6 +11,10 @@ class Game
 	end
 	
 	def score()
+		score = 0
+		for i in (0...@rolls.length)
+			score += @rolls[i]
+		end
 		return @score 
 	end
 	
