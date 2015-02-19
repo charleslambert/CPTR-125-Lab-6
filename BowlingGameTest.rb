@@ -7,15 +7,15 @@ class BowlingGameTest < Test::Unit::TestCase
 		@g = Game.new
 	end
 	
-	def testGutterGame()
-		rollMany(20,0)
-		assert_equal(0, @g.score())
-	end
-	
 	def rollMany(n,pins)
 		for i in 1..n
 			@g.roll(pins)
 		end
+	end
+	
+	def testGutterGame()
+		rollMany(20,0)
+		assert_equal(0, @g.score())
 	end
 	
 	def testAllOnes()
