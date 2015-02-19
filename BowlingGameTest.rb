@@ -19,9 +19,7 @@ class BowlingGameTest < Test::Unit::TestCase
 	end
 	
 	def testAllOnes()
-		for i in 1..20
-			@g.roll(1)
-		end
+		rollMany(20,1)
 		assert_equal(20,@g.score())
 	end
 end
