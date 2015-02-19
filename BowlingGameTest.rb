@@ -22,4 +22,12 @@ class BowlingGameTest < Test::Unit::TestCase
 		rollMany(20,1)
 		assert_equal(20,@g.score())
 	end
+	
+	# def testOneSpare()
+		# @g.roll(5)
+		# @g.roll(5) #spare
+		# @g.roll(3)
+		# rollMany(17,0)
+		# assert_equal(16,@g.score())
+	# end
 end
