@@ -1,8 +1,14 @@
 class Game
+	def initialize 
+		@score = 0
+	end
+	
 	def roll(pins)
+		@score += pins
 	end
 	
 	def score()
-		return 0
+		return @score 
 	end
+	
 end
