@@ -31,11 +31,15 @@ class BowlingGameTest < Test::Unit::TestCase
 	end
 	
 	def testOneStrike()
-		@g.roll(10) # strike
+		rollStrike()
 		@g.roll(3)
 		@g.roll(4)
 		rollMany(16,0)
 		assert_equal(24,@g.score())
+	end
+	
+	def rollStrike()
+		@g.roll(10)
 	end
 	
 	def rollSpare()

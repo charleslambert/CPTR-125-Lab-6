@@ -15,10 +15,10 @@ class Game
 		score = 0
 		frameIndex = 0
 		for frame in (0...10)
-			if isStrike(frameIndex) #strike
+			if isStrike(frameIndex)
 				score +=  10 + strikeBonus(frameIndex)
 				frameIndex += 1
-			elsif isSpare(frameIndex) #spare
+			elsif isSpare(frameIndex)
 				score += 10 + spareBonus(frameIndex)
 				frameIndex += 2
 			else
