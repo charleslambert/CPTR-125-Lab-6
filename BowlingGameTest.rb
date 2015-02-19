@@ -38,6 +38,11 @@ class BowlingGameTest < Test::Unit::TestCase
 		assert_equal(24,@g.score())
 	end
 	
+	def testPerfectGame()
+		rollMany(12,10)
+		assert_equal(300,@g.score)
+	end
+	
 	def rollStrike()
 		@g.roll(10)
 	end
