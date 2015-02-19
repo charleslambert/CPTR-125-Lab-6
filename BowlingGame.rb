@@ -15,7 +15,7 @@ class Game
 		score = 0
 		frameIndex = 0
 		for frame in (0...10)
-			if (@rolls[frameIndex] == 10) #strike
+			if isStrike(frameIndex) #strike
 				score +=  10 + strikeBonus(frameIndex)
 				frameIndex += 1
 			elsif isSpare(frameIndex) #spare
@@ -27,6 +27,10 @@ class Game
 			end
 		end
 		return score 
+	end
+	
+	def isStrike(frameIndex)
+		return @rolls[frameIndex] ==10
 	end
 	
 	def sumOfBallsInFrame(frameIndex)
